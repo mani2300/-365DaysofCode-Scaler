@@ -1,0 +1,16 @@
+public class Solution {
+    public int ncr(int n,int i){
+        if(n==i || i==0){
+            return 1;
+        }
+        return ncr(n-1,i-1)+ncr(n-1,i);
+    }
+    public ArrayList<Integer> getRow(int A) {
+        ArrayList<Integer> ans= new ArrayList<>();
+        for(int i=0;i<=A;i++){
+            ans.add(ncr(A,i));
+        }
+        return ans;
+        
+    }
+}
